@@ -1,0 +1,31 @@
+{
+  "name": "CUIMS Login",
+  "description": "Automatic Login process for CU students",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "/images/icon-16.png",
+    "32": "/images/icon-16.png",
+    "48": "/images/icon-16.png",
+    "128": "/images/icon-16.png"
+  },
+  "browser_action": {
+    "default_icon": "images/icon-16.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "https://uims.cuchd.in/uims/",
+      "https://uims.cuchd.in/uims/?identifier1*",
+      "https://uims.cuchd.in/uims/Login.aspx"
+    ],
+    "js": [
+      "index.js"
+    ]
+  }]
+}

@@ -1,0 +1,56 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UIMS Login extension</title>
+  <style>
+
+    body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      padding: 8px;
+      margin: 0;
+    }
+
+    #UID_pop_field {
+      background-color: transparent;
+      border: 1px solid #000;
+    }
+    #pass_pop_field {
+      background-color: transparent;
+      border: 1px solid #000;
+    }
+
+    
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <form id="my-form">
+    <label for="UID_label">UID</label>
+    <input type="text" id="UID_pop_field">
+    <label for="pass_label">Password</label>
+    <input type="password" id="pass_pop_field">
+    <button id="submit_pop_button" type="button">Submit</button>
+    <br>
+  </form>
+  Created by <a href="https://www.linkedin.com/in/rizul/">Rizul Bhardwaj</a>
+  <p><strong>If the extension doesnt't work simply reload the page :-)</strong></p>
+  <p><strong>UID and Password are lost when you close your browser</strong></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
