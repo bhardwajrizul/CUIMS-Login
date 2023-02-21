@@ -1,5 +1,5 @@
 {
-  "name": "CUIMS Login v3",
+  "name": "CUIMS Login v3 by Rizul",
   "description": "Automatic Login process for CU students",
   "version": "1.0",
   "manifest_version": 3,
@@ -25,7 +25,8 @@
       "https://uims.cuchd.in/uims/Login.aspx"
     ],
     "js": [
-      "index.js"
+      "index.js",
+      "popup.js"
     ]
   }]
 }

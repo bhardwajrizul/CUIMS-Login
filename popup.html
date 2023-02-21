@@ -16,13 +16,55 @@
     #UID_pop_field {
       background-color: transparent;
       border: 1px solid #000;
+      width: 300px;
     }
     #pass_pop_field {
       background-color: transparent;
       border: 1px solid #000;
+      width: 300px;
+
     }
 
-    
+    .note {
+      
+      font-family: futura;
+      font-style: italic;
+      
+      color:#313131;
+      font-size:14px;
+      font-weight: bold;
+
+    }
+
+    .hover {
+      text-shadow: 2px 2px 5px #000;
+      animation: change-text-shadow 4s infinite;
+    }
+
+    @keyframes change-text-shadow {
+      0% {
+        text-shadow:2px 2px 3px #4400ff;
+      }
+      20% {
+        text-shadow:2px 2px 3px #aed523;
+      }
+      40% {
+        text-shadow:2px 2px 3px #ee7752;
+      }
+      60% {
+        text-shadow:2px 2px 3px #fff200;
+      }
+      80% {
+        text-shadow:2px 2px 3px #07e2ff;
+      }
+      90% {
+        text-shadow:2px 2px 3px #ff00d9;
+      }
+      100% {
+        text-shadow:2px 2px 3px #4400ff;
+      }
+
+    }
 
     @keyframes gradient {
       0% {
@@ -39,17 +81,34 @@
   </style>
 </head>
 <body>
+  <p class="note"><strong>1. Go to <a href="https://uims.cuchd.in/uims" target="_blank">UIMS</a> and open extension</strong></p>
+  <p class="note"><strong>2. Enter your UID and Password below</strong></p>
+  <p class="note"><strong>3. Click on Submit</strong></p>
+  <p class="note">4. If error says <u>incorrect captcha</u> then wait as extenstion will retry again on its own :-)</p>
+
+
+
+
   <form id="my-form">
     <label for="UID_label">UID</label>
     <input type="text" id="UID_pop_field">
     <label for="pass_label">Password</label>
     <input type="password" id="pass_pop_field">
     <button id="submit_pop_button" type="button">Submit</button>
+
     <br>
   </form>
-  Created by <a href="https://www.linkedin.com/in/rizul/">Rizul Bhardwaj</a>
-  <p><strong>If the extension doesnt't work simply reload the page :-)</strong></p>
-  <p><strong>UID and Password are lost when you close your browser</strong></p>
+  <p>
+    Created by <a href="https://www.linkedin.com/in/rizul/" target="_blank">Rizul Bhardwaj</a>
+  </p> 
+
+  <strong><p class="note hover">If userId or password is incorrect then close the current UIMS tab</p></strong>
+  <strong><p class="note hover">Click <a href="https://uims.cuchd.in/uims" target="_blank">here</a> and update your UID and password in the extension</p></strong>
+  <strong><p class="note hover">Click Submit</p></strong>
+  <strong><p class="note hover">NOTE: If UID or PASSWORD is incorrect then extension will be stuck in an infinite loop</p></strong>
+  
+  <p><strong>This is version 1 so bugs are present</strong></p>
+  <p><strong>UID and Password may be lost sometimes when you close your browser</strong></p>
 
   <script src="popup.js"></script>
 </body>
