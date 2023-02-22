@@ -1,14 +1,15 @@
-let UID = localStorage.getItem('CUIMS_UID').trim();
-let pass = localStorage.getItem('CUIMS_PASS').trim();
+
+let UID = localStorage.getItem('CUIMS_UID');
+let pass = localStorage.getItem('CUIMS_PASS');
 
 if (UID && pass) {
   document.getElementById('UID_pop_field').value = UID;
   document.getElementById('pass_pop_field').value = pass;
 }
-
+console.log('script loaded');
 document.getElementById('submit_pop_button').addEventListener('click', (e) => {
     e.preventDefault();
-
+    console.log('click');
     UID = document.getElementById('UID_pop_field').value.trim()
     pass = document.getElementById('pass_pop_field').value.trim()
   

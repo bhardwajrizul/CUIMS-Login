@@ -3,6 +3,7 @@
 
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  console.log("message recieved");
 
   if (request.message) {
     let UID, pass;
@@ -11,7 +12,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     localStorage.setItem('CUIMS_UID', UID)
     localStorage.setItem('CUIMS_PASS', pass)
     
-    // console.log(request.message);
 
     if (UID && pass) {
       if (document.getElementById('txtUserId')) {
