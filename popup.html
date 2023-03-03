@@ -28,7 +28,7 @@
     .note {
       
       font-family: futura;
-      font-style: italic;
+      font-style: bold;
       
       color:#313131;
       font-size:14px;
@@ -81,10 +81,9 @@
   </style>
 </head>
 <body>
-  <p class="note"><strong>1. Go to <a href="https://uims.cuchd.in/uims" target="_blank">UIMS</a> and open extension</strong></p>
-  <p class="note"><strong>2. Enter your UID and Password below</strong></p>
-  <p class="note"><strong>3. Click on Submit</strong></p>
-  <p class="note">4. If error says <u>incorrect captcha</u> then wait as extenstion will retry again on its own :-)</p>
+  <p class="note"><strong>STEP 1. Go to <a href="https://uims.cuchd.in/uims" target="_blank">UIMS</a> and open extension</strong></p>
+  <p class="note"><strong>STEP 2. Enter your UID and Password below</strong></p>
+  <p class="note"><strong>STEP 3. Click on Submit</strong></p>
 
 
 
@@ -98,17 +97,16 @@
 
     <br>
   </form>
-  <p>
-    Created by <a href="https://www.linkedin.com/in/rizul/" target="_blank">Rizul Bhardwaj</a>
+  <p class="note"><strong>If submit button doesn't work then reload page and try again</strong></p>
+  <p class="note">If uims says <u> Error:  invalid captcha</u> then wait as extenstion will retry again on its own :-)</p>
+
+  <p class="hover">
+    Created by <a href="https://www.linkedin.com/in/rizul/" target="_blank"><b>Rizul Bhardwaj</b></a>
   </p> 
 
-  <strong><p class="note hover">If userId or password is incorrect then close the current UIMS tab</p></strong>
-  <strong><p class="note hover">Click <a href="https://uims.cuchd.in/uims" target="_blank">here</a> and update your UID and password in the extension</p></strong>
-  <strong><p class="note hover">Click Submit</p></strong>
-  <strong><p class="note hover">NOTE: If UID or PASSWORD is incorrect then extension will be stuck in an infinite loop</p></strong>
+  <strong><p class="note hover">NOTE: If userId or password is incorrect then close the current UIMS tab and start again from STEP 1</p></strong>
   
-  <p><strong>This is version 1 so bugs are present</strong></p>
-  <p><strong>UID and Password may be lost sometimes when you close your browser</strong></p>
+  <p><strong>Doesnt work 100% of the time</strong></p>
 
   <script src="popup.js"></script>
 </body>

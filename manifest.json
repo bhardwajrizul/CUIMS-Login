@@ -1,7 +1,7 @@
 {
   "name": "CUIMS Login by Rizul",
   "description": "Automatic Login process for CU students",
-  "version": "1.1",
+  "version": "3",
   "manifest_version": 3,
   "icons": {
     "16": "/images/icon-16.png",
@@ -15,11 +15,17 @@
   },
   "permissions": [
     "tabs",
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "background": {
     "service_worker": "popup.js"
   },
+  "host_permissions": [
+    "https://uims.cuchd.in/uims/",
+    "https://uims.cuchd.in/uims/?identifier1*",
+    "https://uims.cuchd.in/uims/Login.aspx"
+  ],
   "content_scripts": [{
     "matches": [
       "https://uims.cuchd.in/uims/",

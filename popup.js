@@ -1,11 +1,26 @@
+chrome.tabs.onActivated.addListener((activeInfo) => {
+  chrome.tabs.get(activeInfo.tabId, (tab) => {
+    console.log(tab.url);
+  });
+});
 
-let UID = localStorage.getItem('CUIMS_UID');
-let pass = localStorage.getItem('CUIMS_PASS');
+let UID;
+let pass;
 
-if (UID && pass) {
-  document.getElementById('UID_pop_field').value = UID;
-  document.getElementById('pass_pop_field').value = pass;
-}
+chrome.storage.local.get('CUIMS_UID', function(result) {
+  UID = result.CUIMS_UID;
+  if (UID) {
+    document.getElementById('UID_pop_field').value = UID;
+  }
+});
+chrome.storage.local.get('CUIMS_PASS', function(result) {
+  pass = result.CUIMS_PASS;
+  if (pass) {
+    document.getElementById('pass_pop_field').value = pass;
+  }
+});
+
+
 console.log('script loaded');
 document.getElementById('submit_pop_button').addEventListener('click', (e) => {
     e.preventDefault();
@@ -13,8 +28,12 @@ document.getElementById('submit_pop_button').addEventListener('click', (e) => {
     UID = document.getElementById('UID_pop_field').value.trim()
     pass = document.getElementById('pass_pop_field').value.trim()
   
-    localStorage.setItem('CUIMS_UID', UID)
-    localStorage.setItem('CUIMS_PASS', pass)
+    chrome.storage.local.set({ 'CUIMS_UID': UID }, function() {
+      console.log('Value stored');
+    });
+    chrome.storage.local.set({ 'CUIMS_PASS': pass }, function() {
+      console.log('Value stored');
+    });
 
     // Send a message to index.js
     let dataToWebPage = {
