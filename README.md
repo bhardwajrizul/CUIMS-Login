@@ -1,6 +1,6 @@
 # CUIMS login by Rizul
 
-[![LinkedIn](https://img.shields.io/badge/-Rizul-blue?style=flat-square&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/rizul/)](https://www.linkedin.com/in/rizul/)
+![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
 
 CUIMS login by Rizul is a Chrome extension that enables automatic login to your UIMS (University Institute of Engineering and Technology, Chandigarh University) account. This extension securely remembers your ID and password, eliminating the need for manual entry each time.
 
